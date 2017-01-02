@@ -20,7 +20,7 @@ class File{
             return null;
        }
 
-       $result = array();
+       $result = array("hi");
        foreach(scandir($path, $sortOrder) as $filename){
             if(is_file($path . $filename)){
 
