@@ -222,8 +222,11 @@
                      <input type="submit" value="go" id="submit">
                 </form>
                 <div class="libContent row col-lg-12" style="border: .5px solid black; border-radius: 5px;">
+                     <?php
+                         echo "<pre>", print_r(File::listDir("/var/www/midi")), "</pre>";
+                     ?>
                      <div class="dropdown">
-                         <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                         <button onclick="dropdownMenu()" class="dropbtn">Dropdown</button>
                          <div id="myDropdown" class="dropdown-content">
                               <a href="#home">Home</a>
                               <a href="#about">About</a>
@@ -250,7 +253,7 @@
     <script>
           /* When the user clicks on the button,
           toggle between hiding and showing the dropdown content */
-          function myFunction() {
+          function dropdownMenu() {
               document.getElementById("myDropdown").classList.toggle("show");
           }
 
