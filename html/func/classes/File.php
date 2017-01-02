@@ -36,6 +36,8 @@ class File{
                       }
                  }
 
+            }else {
+                 $result[] = "Failed both, ", print_r($filename);
             }
        }
 
