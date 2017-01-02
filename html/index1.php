@@ -3,7 +3,8 @@
 <head>
   <?php
     error_reporting(-1);
-    require_once("/var/www/html/func/core/init.php");
+    $documentRoot = $_SERVER['DOCUMENT_ROOT'];
+    require_once($documentRoot . "/func/core/init.php");
   ?>
 	<meta charset="utf-8">
 	<title>Project Title</title>
