@@ -27,14 +27,15 @@ class File{
                  $result[] = $files;
 
             }elseif(is_dir($path . "/" . $files)){
-
+                 $farr = array();
                  foreach(scandir($path . "/" .  $files) as $subfile){
                       if(is_file($path . "/" . $files . $subfile)){
 
-                           $result[$files][] = $subfile;
+                           $farr[] = $subfile;
 
                       }
                  }
+                 $result[$files] = $farr;
 
             }else {
                  $result[] = "Failed both, \"" . $path . "/" . $files . "\"" .  print_r($files);
