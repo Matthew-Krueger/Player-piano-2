@@ -28,7 +28,7 @@ class File{
 
             }elseif(is_dir($path . "/" . $files)){
 
-                 foreach(scandir($path . $files) as $subfile){
+                 foreach(scandir($path . "/" .  $files) as $subfile){
                       if(is_file($path . "/" . $files . $subfile)){
 
                            $result[$files][] = $subfile;
