@@ -38,7 +38,7 @@ class File{
          }else{
 
            # File is full
-           switch $actionIfFull{
+           switch ($actionIfFull){
              case "append" || "postpend":
                self::putFile($path, $newContents, FILE_APPEND);
                break;
