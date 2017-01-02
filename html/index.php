@@ -28,6 +28,124 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <style>
+          .form-wrapper #search {
+          	border: 1px solid #CCC;
+          	-webkit-box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
+          	-moz-box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
+          	box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
+          	-webkit-border-radius: 3px;
+          	-moz-border-radius: 3px;
+          	border-radius: 3px;
+            color: #999;
+          	float: left;
+          	font: 16px Lucida Sans, Trebuchet MS, Tahoma, sans-serif;
+          	height: 20px;
+          	padding: 10px;
+          	width: 320px;
+          }
+
+          .form-wrapper #search:focus {
+          	border-color: #aaa;
+          	-webkit-box-shadow: 0 1px 1px #bbb inset;
+          	-moz-box-shadow: 0 1px 1px #bbb inset;
+          	box-shadow: 0 1px 1px #bbb inset;
+          	outline: 0;
+          }
+
+          .form-wrapper #search:-moz-placeholder,
+          .form-wrapper #search:-ms-input-placeholder,
+          .form-wrapper #search::-webkit-input-placeholder {
+          	color: #999;
+          	font-weight: normal;
+          }
+
+          .form-wrapper #submit {
+          	background-color: #0483a0;
+          	background-image: -webkit-gradient(linear, left top, left bottom, from(#31b2c3), to(#0483a0));
+          	background-image: -webkit-linear-gradient(top, #31b2c3, #0483a0);
+          	background-image: -moz-linear-gradient(top, #31b2c3, #0483a0);
+          	background-image: -ms-linear-gradient(top, #31b2c3, #0483a0);
+          	background-image: -o-linear-gradient(top, #31b2c3, #0483a0);
+          	background-image: linear-gradient(top, #31b2c3, #0483a0);
+          	border: 1px solid #00748f;
+          	-moz-border-radius: 3px;
+          	-webkit-border-radius: 3px;
+          	border-radius: 3px;
+          	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #FFF;
+          	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #FFF;
+          	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #FFF;
+          	color: #fafafa;
+          	cursor: pointer;
+          	height: 42px;
+          	float: right;
+          	font: 15px Arial, Helvetica;
+          	padding: 0;
+          	text-transform: uppercase;
+          	text-shadow: 0 1px 0 rgba(0, 0 ,0, .3);
+          	width: 100px;
+          }
+
+          .form-wrapper #submit:hover,
+          .form-wrapper #submit:focus {
+          	background-color: #31b2c3;
+          	background-image: -webkit-gradient(linear, left top, left bottom, from(#0483a0), to(#31b2c3));
+          	background-image: -webkit-linear-gradient(top, #0483a0, #31b2c3);
+          	background-image: -moz-linear-gradient(top, #0483a0, #31b2c3);
+          	background-image: -ms-linear-gradient(top, #0483a0, #31b2c3);
+          	background-image: -o-linear-gradient(top, #0483a0, #31b2c3);
+          	background-image: linear-gradient(top, #0483a0, #31b2c3);
+          }
+
+          .form-wrapper #submit:active {
+          	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+          	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+          	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+          	outline: 0;
+          }
+
+          .form-wrapper #submit::-moz-focus-inner {
+          	border: 0;
+          }
+          .dropbtn {
+              background-color: #4CAF50;
+              color: white;
+              padding: 16px;
+              font-size: 16px;
+              border: none;
+              cursor: pointer;
+          }
+
+          .dropbtn:hover, .dropbtn:focus {
+              background-color: #3e8e41;
+          }
+
+          .dropdown {
+              position: relative;
+              display: inline-block;
+          }
+
+          .dropdown-content {
+              display: none;
+              position: absolute;
+              background-color: #f9f9f9;
+              min-width: 160px;
+              overflow: auto;
+              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          }
+
+          .dropdown-content a {
+              color: black;
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+          }
+
+          .dropdown a:hover {background-color: #f1f1f1}
+
+          .show {display:block;}
+     </style>
+
 </head>
 <body>
      <!-- Navigation -->
@@ -71,7 +189,15 @@
                 <h1 class="page-header">
                     Welcome to Player Piano
                 </h1>
-                <h3>Version 0.0.1 Alpha</h3>
+                <h3>Library</h3>
+                <form class="form-wrapper">
+                     <input type="text" id="search" placeholder="Search your library for..." required>
+                     <input type="submit" value="go" id="submit">
+                </form>
+                <div class="libContent row col-lg-12" style="outline:1px;">
+                     Test
+                </div>
+                <!-- /.libContent -->
            </div>
        </div>
         <!-- /.row -->
@@ -87,6 +213,28 @@
 
     </div>
     <!-- /.container -->
+    <script>
+          /* When the user clicks on the button,
+          toggle between hiding and showing the dropdown content */
+          function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+          }
+
+          // Close the dropdown if the user clicks outside of it
+          window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+          }
+     </script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

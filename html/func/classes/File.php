@@ -15,6 +15,14 @@ class File{
 
   }
 
+  public static function listDir($path = null, $sortOrder = null){
+       if(!isset($path)){
+            return null;
+       }
+
+       return scandir($path, $sortOrder);
+ }
+
   public static function put($path = null, $newContents = "", $actionIfFull = ""){
 
     if(!isset($path) || $newContents == ""){
