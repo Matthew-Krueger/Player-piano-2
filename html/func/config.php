@@ -5,7 +5,7 @@ $GLOBALS['config'] = array(
 	'mysql'		=> array(
 				'host'		=> 'localhost',
 				'username'	=> 'root',
-				'password'	=>  ((isset(PASS)) ? PASS : null),
+				'password'	=>  ((PASS !== null) ? PASS : null),
         'db'        => array(
         	'pageData' => array(
         		'location'  => 'locationsMap',
