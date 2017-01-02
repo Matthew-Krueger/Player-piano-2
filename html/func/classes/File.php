@@ -20,7 +20,20 @@ class File{
             return null;
        }
 
-       return scandir($path, $sortOrder);
+       $result = array();
+       foreach(scandir($path, $sortOrder) as $filename){
+            if(is_file($path . $filename) && ($filename != "." || $filename != "..")){
+                 $result[] = $filename;
+            }elseif(is_dir($path . $filename) && ($filename != "." || $filename != "..")){
+                 foreach(scandir($path . $filename as $subfile)){
+                      if(is_file($path . $filename . $subfile)){
+                           $result[$filename][] = $subfile;
+                      }
+                 }
+            }
+       }
+
+       return $result;
  }
 
   public static function put($path = null, $newContents = "", $actionIfFull = ""){
