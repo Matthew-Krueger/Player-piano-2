@@ -22,14 +22,20 @@ class File{
 
        $result = array();
        foreach(scandir($path, $sortOrder) as $filename){
-            if(is_file($path . $filename) && ($filename != "." || $filename != "..")){
+            if(is_file($path . $filename)){
+
                  $result[] = $filename;
-            }elseif(is_dir($path . $filename) && ($filename != "." || $filename != "..")){
+
+            }elseif(is_dir($path . $filename)){
+
                  foreach(scandir($path . $filename) as $subfile){
                       if(is_file($path . $filename . $subfile)){
+
                            $result[$filename][] = $subfile;
+
                       }
                  }
+
             }
        }
 
