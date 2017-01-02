@@ -29,6 +29,12 @@
     <![endif]-->
 
     <style>
+          body {
+            background: #eee;
+            font: 12px Lucida sans, Arial, Helvetica, sans-serif;
+          	color: #333;
+          	text-align: center;
+          }
           .form-wrapper {
           	background-color: #f6f6f6;
           	background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#eae8e8));
