@@ -25,7 +25,7 @@ class File{
             if(is_file($path . $filename) && ($filename != "." || $filename != "..")){
                  $result[] = $filename;
             }elseif(is_dir($path . $filename) && ($filename != "." || $filename != "..")){
-                 foreach(scandir($path . $filename) as $subfile)){
+                 foreach(scandir($path . $filename) as $subfile){
                       if(is_file($path . $filename . $subfile)){
                            $result[$filename][] = $subfile;
                       }
