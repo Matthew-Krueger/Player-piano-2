@@ -225,7 +225,7 @@
                      <?php
                          echo "<pre>", print_r(File::listDir("/var/www/midi")), "</pre>";
 
-                         $dirarr = File::listDir("/var/www/midi");
+                         $dirarr = File::listDir("/var/www/midi/");
                          $ids = 1;
                          foreach ($dirarr as $rootitem) {
                               $ids++;

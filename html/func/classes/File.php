@@ -21,23 +21,23 @@ class File{
        }
 
        $result = array("hi");
-       foreach(scandir($path, $sortOrder) as $filename){
-            if(is_file($path . $filename)){
+       foreach(scandir($path, $sortOrder) as $files){
+            if(is_file($path . $files)){
 
-                 $result[] = $filename;
+                 $result[] = $files;
 
-            }elseif(is_dir($path . $filename)){
+            }elseif(is_dir($path . $files)){
 
-                 foreach(scandir($path . $filename) as $subfile){
-                      if(is_file($path . $filename . $subfile)){
+                 foreach(scandir($path . $files) as $subfile){
+                      if(is_file($path . $files . $subfile)){
 
-                           $result[$filename][] = $subfile;
+                           $result[$files][] = $subfile;
 
                       }
                  }
 
             }else {
-                 $result[] = "Failed both, " .  print_r($filename);
+                 $result[] = "Failed both, " .  print_r($files);
             }
        }
 
