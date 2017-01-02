@@ -217,16 +217,16 @@
                     Welcome to Player Piano
                 </h1>
                 <h3>Library</h3>
-                <form class="form-wrapper">
+                <!--<form class="form-wrapper">
                      <input type="text" id="search" placeholder="Search your library for..." required>
                      <input type="submit" value="go" id="submit">
-                </form>
+                </form>-->
                 <div class="libContent row col-lg-12" style="border: .5px solid black; border-radius: 5px;">
                      <?php
                          echo "<pre>", print_r(File::listDir("/var/www/midi")), "</pre>";
 
                          $dirarr = File::listDir("/var/www/midi/");
-                         foreach ($ddirarr as $fileName) {
+                         foreach ($dirarr as $fileName) {
                               # EXECUTE LISTING
                               if($fileName != "." && $fileName != ".." && is_string($fileName)){
                                    ?><div class="dropdown"><button class="dropbtn"><?php echo $fileName; ?></button></div><?php
