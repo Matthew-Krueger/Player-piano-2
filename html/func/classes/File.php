@@ -20,6 +20,8 @@ class File{
             return null;
        }
 
+       return scandir($path, $sortOrder);
+
        $result = array("hi");
        foreach(scandir($path, $sortOrder) as $files){
             if(is_file($path . "/" . $files)){

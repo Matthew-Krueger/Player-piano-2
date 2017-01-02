@@ -226,35 +226,13 @@
                          echo "<pre>", print_r(File::listDir("/var/www/midi")), "</pre>";
 
                          $dirarr = File::listDir("/var/www/midi/");
-                         $ids = 1;
-                         foreach ($dirarr as $rootitem) {
-                              $ids++;
-                              if($rootitem == "." || $rootitem == ".."){
-                                   continue;
-                              }
-
-                              if(is_array($rootitem)){
-                                   echo "<div class=\"dropdown\">
-                                   <button onclick=\"dropdownMenu{$ids}()\" class=\"dropbtn\"></button>
-                                   <div id=\"myDropdown{$ids}\" class=\"dropdown-content\">";
-
-                                   foreach ($rootitem as $layer2item) {
-                                        echo "<div>item$ids to do: $layer2item</div>";
-                                   }
-
-
-                              }elseif (is_string($rootitem)) {
-
-                                   echo "<div class=\"dropdown\"><div class=\"dropbtn\">Id$ids to do: $rootitem</div></div>";
-
+                         foreach ($ddirarr as $fileName) {
+                              # EXECUTE LISTING
+                              if($fileName != "." && $fileName != ".." && is_string($fileName)){
+                                   ?><div class="dropdown"><button class="dropbtn"><?php echo $fileName; ?></button></div><?php
                               }
                          }
-
-
-
                      ?>
-
-
                      <div class="dropdown">
                          <button onclick="dropdownMenu()" class="dropbtn">Dropdown</button>
                          <div id="myDropdown" class="dropdown-content">
