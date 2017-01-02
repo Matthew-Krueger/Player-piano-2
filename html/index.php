@@ -29,6 +29,28 @@
     <![endif]-->
 
     <style>
+          .form-wrapper {
+          	background-color: #f6f6f6;
+          	background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#eae8e8));
+          	background-image: -webkit-linear-gradient(top, #f6f6f6, #eae8e8);
+          	background-image: -moz-linear-gradient(top, #f6f6f6, #eae8e8);
+          	background-image: -ms-linear-gradient(top, #f6f6f6, #eae8e8);
+          	background-image: -o-linear-gradient(top, #f6f6f6, #eae8e8);
+          	background-image: linear-gradient(top, #f6f6f6, #eae8e8);
+          	border-color: #dedede #bababa #aaa #bababa;
+          	border-style: solid;
+          	border-width: 1px;
+          	-webkit-border-radius: 10px;
+          	-moz-border-radius: 10px;
+          	border-radius: 10px;
+          	-webkit-box-shadow: 0 3px 3px rgba(255,255,255,.1), 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 5px #444;
+          	-moz-box-shadow: 0 3px 3px rgba(255,255,255,.1), 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 5px #444;
+          	box-shadow: 0 3px 3px rgba(255,255,255,.1), 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 5px #444;
+          	margin: 100px auto;
+          	overflow: hidden;
+          	padding: 8px;
+          	width: 450px;
+          }
           .form-wrapper #search {
           	border: 1px solid #CCC;
           	-webkit-box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
@@ -194,7 +216,7 @@
                      <input type="text" id="search" placeholder="Search your library for..." required>
                      <input type="submit" value="go" id="submit">
                 </form>
-                <div class="libContent row col-lg-12" style="outline:1px;">
+                <div class="libContent row col-lg-12" style="border: .5px solid black; border-radius: 5px;">
                      Test
                 </div>
                 <!-- /.libContent -->
