@@ -22,14 +22,14 @@ class File{
 
        $result = array("hi");
        foreach(scandir($path, $sortOrder) as $files){
-            if(is_file($path . $files)){
+            if(is_file($path . "/" . $files)){
 
                  $result[] = $files;
 
-            }elseif(is_dir($path . $files)){
+            }elseif(is_dir($path . "/" . $files)){
 
                  foreach(scandir($path . $files) as $subfile){
-                      if(is_file($path . $files . $subfile)){
+                      if(is_file($path . "/" . $files . $subfile)){
 
                            $result[$files][] = $subfile;
 
@@ -37,7 +37,7 @@ class File{
                  }
 
             }else {
-                 $result[] = "Failed both, \"" . $path . $files . "\"" .  print_r($files);
+                 $result[] = "Failed both, \"" . $path . "/" . $files . "\"" .  print_r($files);
             }
        }
 
