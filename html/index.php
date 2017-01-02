@@ -248,7 +248,6 @@
                                    echo "<div class=\"dropdown\"><div class=\"dropbtn\">Id$ids to do: $rootitem</div></div>";
 
                               }
-                              ?></div><?php
                          }
 
 

@@ -37,7 +37,7 @@ class File{
                  }
 
             }else {
-                 $result[] = "Failed both, " .  print_r($files);
+                 $result[] = "Failed both, \"" . $path . $files . "\"" .  print_r($files);
             }
        }
 
