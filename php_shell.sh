@@ -1,2 +1,2 @@
   #!/bin/sh
-  smfplay -d 20:0 /var/www/html/midi/VivaLaVida.mid
+  smfplay -d 20:0 /var/www/midi/VivaLaVida.mid
