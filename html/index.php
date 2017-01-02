@@ -31,7 +31,7 @@
     <style>
           body {
             background: #eee;
-            font: 12ct Lucida sans, Arial, Helvetica, sans-serif;
+            font: 20px Lucida sans, Arial, Helvetica, sans-serif;
           	color: #333;
           }
           .form-wrapper {
@@ -222,7 +222,14 @@
                      <input type="submit" value="go" id="submit">
                 </form>
                 <div class="libContent row col-lg-12" style="border: .5px solid black; border-radius: 5px;">
-                     Test
+                     <div class="dropdown">
+                         <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                         <div id="myDropdown" class="dropdown-content">
+                              <a href="#home">Home</a>
+                              <a href="#about">About</a>
+                              <a href="#contact">Contact</a>
+                       </div>
+                    </div>
                 </div>
                 <!-- /.libContent -->
            </div>
