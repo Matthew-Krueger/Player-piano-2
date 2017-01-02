@@ -70,7 +70,7 @@ class File{
   }
 
   private static function putFile($path, $content){
-       file_put_contents()
+       file_put_contents($path, $content);
   }
 
 }
