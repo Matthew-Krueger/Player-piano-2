@@ -37,7 +37,7 @@ class File{
                  }
 
             }else {
-                 $result[] = "Failed both, ", print_r($filename);
+                 $result[] = "Failed both, " .  print_r($filename);
             }
        }
 
