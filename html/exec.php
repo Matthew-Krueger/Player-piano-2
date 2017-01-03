@@ -1,3 +1,3 @@
 <?php
-exec("../php_root");
+exec("/var/www/php_root");
  ?>
