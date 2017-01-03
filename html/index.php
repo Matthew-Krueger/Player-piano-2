@@ -229,7 +229,7 @@
                               # EXECUTE LISTING
                               if($fileName != "." && $fileName != ".." && is_string($fileName)){
                                    $fname = $fileName;
-                                   str_replace(array("_",".mid"), array(".mid",""), $fileName);
+                                   $fileName = str_replace(array("_",".mid"), array(".mid",""), $fileName);
                                    ?><div class="dropdown"><button class="dropbtn" onclick="httpGetAsync('<?php echo "/handleRequest.php?file=" . $fname; ?>', function(){httpGetAsync('/exec.php',function(){}); })"><?php echo $fileName; ?></button></div><?php
                               }
                          }
