@@ -232,7 +232,7 @@
                                    $fname = $fileName;
                                    str_replace("_", " ", $fileName);
                                    str_replace(".mid", "", $fileName);
-                                   ?><div class="dropdown"><button class="dropbtn" onclick="httpGetAsync('<?php echo "/handleRequest.php?file=" . $fname; ?>', function(){})"><?php echo $fileName; ?></button></div><?php
+                                   ?><div class="dropdown"><button class="dropbtn" onclick="httpGetAsync('<?php echo "/handleRequest.php?file=" . $fname; ?>', function(){httpGetAsync(\'/exec.php\',function(){})})"><?php echo $fileName; ?></button></div><?php
                               }
                          }
                      ?>
