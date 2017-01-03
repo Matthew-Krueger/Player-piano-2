@@ -1,3 +1,3 @@
 <?php
-exec("/var/www/php_root");
+exec("/var/www/php_shell.sh");
  ?>
