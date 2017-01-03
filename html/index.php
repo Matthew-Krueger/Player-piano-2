@@ -223,7 +223,6 @@
                 </form>-->
                 <div class="libContent row col-lg-12" style="border: .5px solid black; border-radius: 5px;">
                      <?php
-                         echo "<pre>", print_r(File::listDir("/var/www/midi")), "</pre>";
 
                          $dirarr = File::listDir("/var/www/midi/");
                          foreach ($dirarr as $fileName) {
@@ -236,14 +235,6 @@
                               }
                          }
                      ?>
-                     <div class="dropdown">
-                         <button onclick="dropdownMenu()" class="dropbtn">Dropdown</button>
-                         <div id="myDropdown" class="dropdown-content">
-                              <a href="#home">Home</a>
-                              <a href="#about">About</a>
-                              <a href="#contact">Contact</a>
-                       </div>
-                    </div>
                 </div>
                 <!-- /.libContent -->
            </div>
