@@ -229,7 +229,10 @@
                          foreach ($dirarr as $fileName) {
                               # EXECUTE LISTING
                               if($fileName != "." && $fileName != ".." && is_string($fileName)){
-                                   ?><div class="dropdown"><button class="dropbtn"><?php echo $fileName; ?></button></div><?php
+                                   $fname = $fileName;
+                                   str_replace("_", " ", $fileName);
+                                   str_replace(".mid", "", $fileName);
+                                   ?><div class="dropdown"><button class="dropbtn" onclick="httpGetAsync('<?php echo "/handleRequest.php?file=" . $fname; ?>', function(){})"><?php echo $fileName; ?></button></div><?php
                               }
                          }
                      ?>
@@ -259,7 +262,18 @@
     </div>
     <!-- /.container -->
     <script>
-          /* When the user clicks on the button,
+
+     function httpGetAsync(theUrl, callback)
+          {
+              var xmlHttp = new XMLHttpRequest();
+              xmlHttp.onreadystatechange = function() {
+                  if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                      callback(xmlHttp.responseText);
+              }
+              xmlHttp.open("GET", theUrl, true); // true for asynchronous
+              xmlHttp.send(null);
+          }
+                    /* When the user clicks on the button,
           toggle between hiding and showing the dropdown content */
           function dropdownMenu() {
               document.getElementById("myDropdown").classList.toggle("show");
