@@ -34,7 +34,8 @@ if(!empty($_FILES['file'])){
                     );
                } else {
                     $failed[] = array(
-                         'name' => $name
+                         'name' => $name,
+                         'file_data_array' => $_FILES
                     );
                }
 
