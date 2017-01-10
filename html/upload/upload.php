@@ -11,7 +11,7 @@ header('Content-Type: application/json');
 $pathToUploadTo = "/var/www/midi/";
 
 $uploaded = [];
-$allowed = ['mid'];
+$allowed = ['mid','jpg'];
 
 $succeeded = [];
 $failed = [];
@@ -34,8 +34,7 @@ if(!empty($_FILES['file'])){
                     );
                } else {
                     $failed[] = array(
-                         'name' => $name,
-                         'file_data_array' => $_FILES
+                         'name' => $name
                     );
                }
 
