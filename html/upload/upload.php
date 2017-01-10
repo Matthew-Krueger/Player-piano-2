@@ -30,7 +30,7 @@ if(!empty($_FILES['file'])){
                     $succeeded[] = array(
                          'name'    => $name,
                          'file'    => $file,
-                         'path'    => $pathToUploadTo . $file
+                         'path'    => "{$pathToUploadTo}{$file}"
                     );
                } else {
                     $failed[] = array(
@@ -47,6 +47,8 @@ if(!empty($_FILES['file'])){
                'succeeded'    => $succeeded,
                'failed'       => $failed
           ));
+     }else {
+          echo json_encode(array());
      }
 
 }
