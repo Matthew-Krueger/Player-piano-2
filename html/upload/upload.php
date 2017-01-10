@@ -23,7 +23,7 @@ if(!empty($_FILES['file'])){
 
                $temp = $_FILES['file']['tmp_name'][$key];
 
-               $ext = explode('.' $name);
+               $ext = explode('.', $name);
                $ext = strtolower(end($ext));
 
                if(in_array($ext, $allowed) === true && move_uploaded_file($temp, "{$pathToUploadTo}{$file}") === true){
